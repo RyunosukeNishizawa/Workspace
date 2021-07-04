@@ -1,0 +1,88 @@
+@charset "UTF-8";
+html {
+  font-size: 62.5%;
+  font-family: 'Lato', 'Noto Sans JP', 'ヒラギノ角ゴ ProN', 'Hiragino Kaku Gothic ProN', 'メイリオ', Meiryo, 'ＭＳ Ｐゴシック', 'MS PGothic', sans-serif;
+}
+
+body {
+  font-size: 1.6rem;
+}
+
+section {
+  padding: 50px 0;
+}
+
+.main__content {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 40px;
+}
+
+.heading01__title {
+  width: 100%;
+  padding: 200px 0px;
+  background-color: #E7FEFF;
+}
+
+.heading01__title__text {
+  text-align: center;
+  font-size: 6.4rem;
+  font-weight: bold;
+  color: #3F6CFB;
+}
+
+.heading02__title {
+  width: 100%;
+  padding: 50px 0px;
+}
+
+.heading02__title__text {
+  text-align: center;
+  font-size: 4.8rem;
+  font-weight: bold;
+  color: #FFA1CA;
+}
+
+.profile__content__box {
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.profile__content__box__text {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.profile__content__box__text:nth-child(n+2) {
+  margin-top: 20px;
+}
+
+.skill__content__column {
+  display: -webkit-box;
+  display: flex;
+  display: -ms-flexbox;
+  justify-content: space-between;
+  -webkit-box-pack: space-between;
+  -ms-flex-pack: space-between;
+  align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.skill__content__column__item {
+  padding: 20px;
+  width: 50%;
+}
+
+.skill__content__column__item__lead {
+  text-align: center;
+  font-size: 2.4rem;
+}
+
+.work__content__lead {
+  text-align: center;
+  font-size: 1.6rem;
+}
+/*# sourceMappingURL=app.css.map */

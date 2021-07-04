@@ -1,0 +1,41 @@
+//flexの設定
+@mixin flex($justify:space-between,$align:center) {
+    display: flex;
+    display: -webkit-flex;//Safari,Android,iOS対応
+    display: -ms-flexbox;//IE対応
+    justify-content: $justify;
+    -webkit-box-pack: $justify;//Safari,Android,iOS対応
+    -ms-flex-pack: $justify;//IE対応
+    align-items: $align;
+    -webkit-box-align: $align;//Safari,Android,iOS対応
+    -ms-flex-align: $align;//IE対応
+    flex-wrap: wrap;
+}
+
+//メディアクエリの設定
+@mixin min_pc {
+    @media screen and (min-width: 769px) {
+      @content;
+    }
+}
+@mixin min_sp {
+    @media screen and (max-width: 768px) {
+      @content;
+    }
+}
+
+//フォントサイズの設定
+$base_size:1.6rem;
+$sub_size:1.4rem;
+$accent_size1:2.4rem;
+$accent_size2:3.2rem;
+$accent_size3:4.8rem;
+$accent_size4:6.4rem;
+
+//色の設定
+$base_color:#A6EDFF;
+$sub_color1:#E7FEFF;
+$sub_color2:#FFFFFF;
+$accent_color1:#A3FFDA;
+$accent_color2:#FFA1CA;
+$accent_color3:#3F6CFB;
