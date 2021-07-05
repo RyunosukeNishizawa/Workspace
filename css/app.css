@@ -19,13 +19,17 @@ section {
 }
 
 .heading01__title {
+  display: table;
   width: 100%;
   padding: 200px 0px;
   background-color: #E7FEFF;
+  min-height: 100vh;
 }
 
 .heading01__title__text {
+  display: table-cell;
   text-align: center;
+  vertical-align: middle;
   font-size: 6.4rem;
   font-weight: bold;
   color: #3F6CFB;
