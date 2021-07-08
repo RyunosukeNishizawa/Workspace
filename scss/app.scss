@@ -40,7 +40,7 @@ section{
         color: $accent_color2;
     }
 }
-.profile{
+.nizi{
     &__section{
     }
     &__content{
@@ -57,37 +57,4 @@ section{
         }
     }
 }
-.skill{
-    &__section{
-    }
-    &__content{
-        &__box{
-        }
-        &__column{
-            @include flex;
-            &__item{
-                padding: 20px;
-                width: 50%;
-                &__lead{
-                    text-align: center;
-                    font-size: $accent_size1;
-                }
-                &__text{
 
-                }
-            }
-        }
-    }
-}
-.work{
-    &__section{
-    }
-    &__content{
-        &__lead{
-            text-align: center;
-            font-size: $base_size;
-        }
-        &__box{
-        }
-    }
-}

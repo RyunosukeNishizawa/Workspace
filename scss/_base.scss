@@ -2,7 +2,7 @@
 @mixin flex($justify:space-between,$align:center) {
     display: flex;
     display: -webkit-flex;//Safari,Android,iOS対応
-    display: -ms-flexbox;//IE対応
+    display: -ms-flex;//IE対応
     justify-content: $justify;
     -webkit-box-pack: $justify;//Safari,Android,iOS対応
     -ms-flex-pack: $justify;//IE対応
