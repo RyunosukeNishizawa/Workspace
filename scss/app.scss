@@ -1,5 +1,13 @@
 @import "base";
 
+@-webkit-keyframes niziTitle {
+    0% {
+        stroke-dashoffset: 2000;
+    }
+    100% {
+        stroke-dashoffset: 0;
+    }
+}
 html{
     font-size: 62.5%;
     font-family: 'Lato', 'Noto Sans JP', 'ヒラギノ角ゴ ProN', 'Hiragino Kaku Gothic ProN', 'メイリオ', Meiryo, 'ＭＳ Ｐゴシック', 'MS PGothic', sans-serif;
@@ -18,9 +26,7 @@ section{
 .heading01__title{
     display: table;
     width: 100%;
-    padding: 200px 0px;
-    background-color: $sub_color1;
-    min-height: 100vh;
+    height: 100vh;
     &__text{
         display: table-cell;
         text-align: center;
@@ -28,6 +34,7 @@ section{
         font-size: $accent_size4;
         font-weight: bold;
         color: $accent_color3;
+        position: relative;
     }
 }
 .heading02__title{
@@ -55,6 +62,19 @@ section{
                 }
             }
         }
+    }
+    &__title{
+        stroke-dasharray: 2000;
+        stroke-dashoffset: 0;
+        -webkit-animation: niziTitle 3s ease-in 0s;
+        animation: niziTitle 3s ease-in 0s;
+    }
+    &__svg{
+        position: absolute;
+        top: 20%;
+        left: 0;
+        width: 100%;
+        height: 100vh;
     }
 }
 
