@@ -1,11 +1,12 @@
 import pandas as pd
 from apiclient.discovery import build
 from apiclient.errors import HttpError
+import json
 
 API_KEY = 'AIzaSyBoaa14uzdor3FZ6KjaZOUsUrgPxu6EG6o'
 YOUTUBE_API_SERVICE_NAME = 'youtube'
 YOUTUBE_API_VERSION = 'v3'
-CHANNEL_ID = 'UCD-miitqNY3nyukJ4Fnf4_A'
+CHANNEL_ID = 'UCD-miitqNY3nyukJ4Fnf4_A'#月ノ美兎のチャンネル
 channels = [] #チャンネル情報を格納する配列
 searches = [] #videoidを格納する配列
 videos = [] #各動画情報を格納する配列
@@ -58,8 +59,11 @@ for result in searches:
         if video_result["kind"] == "youtube#video":
             videos.append([video_result["snippet"]["title"],video_result["statistics"]["viewCount"],video_result["statistics"]["likeCount"],video_result["statistics"]["dislikeCount"],video_result["snippet"]["publishedAt"]])
 
-videos_report = pd.DataFrame(videos, columns=['title', 'viewCount', 'likeCount', 'dislikeCount', 'publishedAt'])
-videos_report.to_csv("videos_report.csv", index=None)
+#videos_report = pd.DataFrame(videos, columns=['title', 'viewCount', 'likeCount', 'dislikeCount', 'publishedAt'])
+#videos_report.to_csv("videos_report.csv", index=None)
 
-channel_report = pd.DataFrame(channels, columns=['title', 'subscriberCount', 'videoCount', 'publishedAt'])
-channel_report.to_csv("channels_report.csv", index=None)
+#channel_report = pd.DataFrame(channels, columns=['title', 'subscriberCount', 'videoCount', 'publishedAt'])
+#channel_report.to_csv("channels_report.csv", index=None)
+
+with open("response.json", mode="w", encoding="utf-8") as f:
+    json.dump(videos, f, ensure_ascii=False, indent=2)
